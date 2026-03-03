@@ -1,16 +1,16 @@
-import React from 'react';
-import './EmployeeForm.css';
+import React from "react";
+import "./EmployeeForm.css";
 
 export class EmployeeForm extends React.Component {
   constructor(props) {
     super(props);
     // Initialize the state with required fields set to empty strings
     this.state = {
-      name: '',
-      email: '',
-      phone: '',
-      title: '',
-      department: ''
+      name: "",
+      email: "",
+      phone: "",
+      title: "",
+      department: "",
     };
 
     // Bind event handlers to 'this'
@@ -22,7 +22,7 @@ export class EmployeeForm extends React.Component {
   handleChange(event) {
     const { name, value } = event.target;
     this.setState({
-      [name]: value
+      [name]: value,
     });
   }
 
@@ -41,11 +41,11 @@ export class EmployeeForm extends React.Component {
 
     // 3. Reset the state to clear the form
     this.setState({
-      name: '',
-      email: '',
-      phone: '',
-      title: '',
-      department: ''
+      name: "",
+      email: "",
+      phone: "",
+      title: "",
+      department: "",
     });
   }
 
@@ -53,10 +53,12 @@ export class EmployeeForm extends React.Component {
     return (
       <div className="employee-form-container">
         <h2 className="employee-form-header">Add New Employee</h2>
-        
+
         <form className="employee-form" onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label htmlFor="name" className="form-label">Name</label>
+            <label htmlFor="name" className="form-label">
+              Name
+            </label>
             <input
               type="text"
               id="name"
@@ -71,7 +73,9 @@ export class EmployeeForm extends React.Component {
 
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="email" className="form-label">Email</label>
+              <label htmlFor="email" className="form-label">
+                Email
+              </label>
               <input
                 type="email"
                 id="email"
@@ -83,9 +87,11 @@ export class EmployeeForm extends React.Component {
                 required
               />
             </div>
-            
+
             <div className="form-group">
-              <label htmlFor="phone" className="form-label">Phone</label>
+              <label htmlFor="phone" className="form-label">
+                Phone
+              </label>
               <input
                 type="tel"
                 id="phone"
@@ -101,7 +107,9 @@ export class EmployeeForm extends React.Component {
 
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="title" className="form-label">Job Title</label>
+              <label htmlFor="title" className="form-label">
+                Job Title
+              </label>
               <input
                 type="text"
                 id="title"
@@ -113,9 +121,11 @@ export class EmployeeForm extends React.Component {
                 required
               />
             </div>
-            
+
             <div className="form-group">
-              <label htmlFor="department" className="form-label">Department</label>
+              <label htmlFor="department" className="form-label">
+                Department
+              </label>
               <input
                 type="text"
                 id="department"
