@@ -68,6 +68,7 @@ export class EmployeeForm extends React.Component {
               onChange={this.handleChange}
               placeholder="e.g. Jane Doe"
               required
+              data-testid="input-name"
             />
           </div>
 
@@ -85,6 +86,7 @@ export class EmployeeForm extends React.Component {
                 onChange={this.handleChange}
                 placeholder="jane.doe@company.com"
                 required
+                data-testid="input-email"
               />
             </div>
 
@@ -101,6 +103,7 @@ export class EmployeeForm extends React.Component {
                 onChange={this.handleChange}
                 placeholder="(555) 123-4567"
                 required
+                data-testid="input-phone"
               />
             </div>
           </div>
@@ -119,6 +122,7 @@ export class EmployeeForm extends React.Component {
                 onChange={this.handleChange}
                 placeholder="Software Engineer"
                 required
+                data-testid="input-title"
               />
             </div>
 
@@ -135,11 +139,12 @@ export class EmployeeForm extends React.Component {
                 onChange={this.handleChange}
                 placeholder="Engineering"
                 required
+                data-testid="input-department"
               />
             </div>
           </div>
 
-          <button type="submit" className="form-submit-btn">
+          <button type="submit" className="form-submit-btn" data-testid="button-add-employee">
             Add
           </button>
         </form>
